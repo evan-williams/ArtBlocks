@@ -1,0 +1,69 @@
+﻿{
+  "ApplyTaxes" : 0,
+  "BillingAddress" : 
+    { 
+      "AddressLine1" : "Hayden Whiteman",
+      "AddressLine2" : "123 Test ST",
+      "AddressLine3" : "",
+      "Country" : "8157",
+      "CreatedBy" : 1,
+      "CreatedDate" : "2014-09-21T23:23:59+00:00",
+      "DeliveryNotes" : "",
+      "PostCode" : "6037",
+      "RegionState" : "60174",
+      "TownCity" : "Wellington"
+    },
+  "Currency" : 10109,
+  "Customer" : 
+    { 
+      "Email" : "hayden@dmm.net.nz",
+      "FirstName" : "Hayden",
+      "LastName" : "Whiteman",
+      "PhoneNumber" : "021 123 1234"
+    },
+  "CustomerOrderReference" : "W100002",
+  "ExternalNotes" : "",
+  "IsPaymentReceived" : 0,
+  "ManualApprovalNeeded" : 1,
+  "OrderOrigin" : 3000,
+  "PaymentType" : 26002,
+  "RequestedShippingDate" : "2014-09-21T23:23:59+00:00",
+  "SalesOrderLines" : [ 
+      { 
+        "CostPrice" : 0,
+        "LineNumber" : 1,
+        "ProductID" : "3546741636898461116",
+        "Quantity" : 1,
+        "SellPrice" : 43.960000000000001,
+        "SellPriceExTax" : 38.229999999999997,
+        "SellPriceIncTax" : 43.960000000000001,
+        "TaxCode" : "GST"
+      },
+      { 
+        "CostPrice" : 0,
+        "LineNumber" : 2,
+        "ProductID" : "3546741640968521189",
+        "Quantity" : 1,
+        "SellPrice" : 16.594000000000001,
+        "SellPriceExTax" : 14.43,
+        "SellPriceIncTax" : 16.594000000000001,
+        "TaxCode" : "GST"
+      }
+    ],
+  "ShipmentType" : 25003,
+  "ShippingAddress" : 
+    { 
+      "AddressLine1" : "Hayden Whiteman",
+      "AddressLine2" : "123 Test ST",
+      "AddressLine3" : "",
+      "Country" : "8157",
+      "CreatedBy" : 1,
+      "CreatedDate" : "2014-09-21T23:23:59+00:00",
+      "DeliveryNotes" : "",
+      "PostCode" : "6037",
+      "RegionState" : "60174",
+      "TownCity" : "Wellington"
+    },
+  "TermsOfTrade" : 4000,
+  "TotalsTaxInclusive" : 1
+}
