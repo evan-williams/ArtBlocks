@@ -11,7 +11,7 @@ namespace LTI.API.Client.Jobs
 {
     public class CheckAtsRegularly
     {
-        private const int pollSecs = 10;
+        private const int pollSecs = 15;
 
         public bool Stop { get; set; }
 
@@ -44,8 +44,8 @@ namespace LTI.API.Client.Jobs
         private void GoCheckProducts(TradevineGateway gateway)
         {
             var products = gateway.Products.GetAllProducts();
-            var zeroAts = products.List.Where(x => x.QuantityAvailableToSell == 1).ToList();
-            zeroAts.ForEach(x => ReduceFakeStock(x, gateway));  
+            var boughtProductsNeedingStockReduction = products.List.Where(x => x.QuantityAvailableToSell > 0 && x.SoftAllocated > 0).ToList();
+            boughtProductsNeedingStockReduction.ForEach(x => ReduceFakeStock(x, gateway));  
         }
 
         private void ReduceFakeStock(Product product, TradevineGateway gateway)
