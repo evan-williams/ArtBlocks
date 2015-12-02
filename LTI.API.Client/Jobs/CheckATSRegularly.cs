@@ -11,7 +11,7 @@ namespace LTI.API.Client.Jobs
 {
     public class CheckAtsRegularly
     {
-        private const int pollSecs = 15;
+        private const int pollSecs = 30;
 
         public bool Stop { get; set; }
 
