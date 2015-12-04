@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Threading;
 using LTI.API.Client.Helpers;
 using LTI.API.Model.Client;
@@ -44,7 +45,10 @@ namespace LTI.API.Client.Jobs
         private void GoCheckProducts(TradevineGateway gateway)
         {
             var products = gateway.Products.GetAllProducts();
-            var boughtProductsNeedingStockReduction = products.List.Where(x => x.QuantityAvailableToSell > 0 && x.SoftAllocated > 0).ToList();
+
+            var boughtProductsNeedingStockReduction = products.List.Where(x => x.SoftAllocated > 0 &&
+            x.PerWarehouseInventory != null && x.PerWarehouseInventory.Any(y => y.WarehouseCode == "WH2" && y.QuantityInStockSnapshot > 0)).ToList();
+
             boughtProductsNeedingStockReduction.ForEach(x => ReduceFakeStock(x, gateway));  
         }
 
